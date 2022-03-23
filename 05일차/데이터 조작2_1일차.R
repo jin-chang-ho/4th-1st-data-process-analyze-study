@@ -80,9 +80,3 @@ dcast(m, time ~ variable, mean, na.rm = TRUE)W
 dcast(m, time ~ treatment + variable, mean, na.rm = TRUE)
 
 ddply(m, .(time, treatment, variable), function(rows) {return(mean(rows$value, na.rm = TRUE))})
-
-# install.packages('data.table')
-library(data.table) 
-
-# data.table »ý¼º
-(iris_table <- as.data.table(iris))
